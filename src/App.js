@@ -6,6 +6,7 @@ import SigninForm from "./components/authForm.js/SigninForm";
 import SignupForm from "./components/authForm.js/SignupForm";
 import ChangePasswordForm from "./components/authForm.js/ChangePasswordForm";
 import Home from "./components/Home";
+import Game from "./components/Game";
 import Profile from "./components/Profile";
 class App extends Component {
   state = {
@@ -43,7 +44,8 @@ class App extends Component {
         />
 
         <div className="container">
-          {activePage === "home" ? <Home /> : ""}
+          {activePage === "home" ? <Home changeActivePage={this.changeActivePage} /> : ""}
+          {activePage === "game" ? <Game/> : ""}
           {activePage === "sign-in" ? (
             <SigninForm onSignin={this.onSignin} />
           ) : (
