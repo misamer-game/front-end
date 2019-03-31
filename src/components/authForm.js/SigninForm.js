@@ -1,13 +1,21 @@
 import React, { Component } from "react";
 import apiUrl from "../../apiConfig";
 import { setUser } from "../../services/AuthService";
+import avatar from './login.png';
+import SignupForm from "./SignupForm";
+
 class SigninForm extends Component {
   state = {
     formData: {
       email: null,
       password: null
     },
-    err: null
+    err: null,
+    activePage: "home"
+  };
+
+  changeActivePage = activePage => {
+    this.setState({ activePage });
   };
 
   handleLoginRequest = user => {
@@ -46,35 +54,50 @@ class SigninForm extends Component {
   };
 
   render() {
+    const { activePage } = this.state;
     return (
-      <div className="pt-5 mt-5">
-        <h1>PLEASE SIGININ</h1>
+      <div className="wrapper">
         {this.state.err ? (
           <div className="alert alert-danger"> {this.state.err} </div>
         ) : (
           ""
         )}
-        <form onSubmit={this.handleSubmit}>
-          <div className="form-group">
-            <label>Email </label>
-            <input
-              name="email"
-              className="form-control"
-              onChange={this.handleChange}
-            />
-            <label>Password</label>
-            <input
-              name="password"
-              className="form-control"
-              type="password"
-              onChange={this.handleChange}
-            />
-          </div>
 
-          <button type="submit" className="btn btn-primary">
-            Login
+        <form onSubmit={this.handleSubmit}>
+           <div class="mycontainer">
+           <div className="form">
+           <div className="avatar-wrapper">	
+             <img src={avatar} className="avatar"/> 
+         </div>
+         <br></br>
+         <h2>PLEASE SIGIN</h2>
+          <div className="form-group">
+              <input
+                name="email"
+                className="form-control"
+                onChange={this.handleChange}
+                placeholder="Email"
+               />
+               </div>
+               <br></br>
+             <div className="form-group">
+             <input
+               name="password"
+               type="password"
+               className="form-control"
+               placeholder="Password"
+               onChange={this.handleChange}
+              />
+              </div>
+              <div className="buttonPage">
+              <button type="submit" className="btn btn-outline-warning">
+           Signup </button>  <button onClick={activePage === "game" ? <SignupForm/> : ""} className="btn btn-outline-warning">
+            Signin
           </button>
-        </form>
+          </div>
+          </div>
+          </div>
+          </form>
       </div>
     );
   }

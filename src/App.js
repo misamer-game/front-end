@@ -8,6 +8,11 @@ import ChangePasswordForm from "./components/authForm.js/ChangePasswordForm";
 import Home from "./components/Home";
 import Game from "./components/Game";
 import Profile from "./components/Profile";
+import Background from "./loginPage.svg";
+
+
+
+
 class App extends Component {
   state = {
     user: null,
@@ -63,7 +68,9 @@ class App extends Component {
           )}
           {activePage === "profile" ? <Profile /> : ""}
         </div>
-      </div>
+        <div className="background">
+        </div>
+        </div>
     );
   }
 }
