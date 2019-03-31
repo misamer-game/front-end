@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import apiUrl from "../../apiConfig";
 import { setUser } from "../../services/AuthService";
+import avatar from './signup.png';
+
 class SignupForm extends Component {
   state = {
     formData: {
@@ -46,43 +48,52 @@ class SignupForm extends Component {
 
   render() {
     return (
-      <div className="pt-5 mt-5">
-        <h1>PLEASE SIGNUP</h1>
+      <div className="wrapper">
         {this.state.err ? (
           <div className="alert alert-warning"> {this.state.err} </div>
         ) : (
           ""
         )}
         <form onSubmit={this.handleSubmit}>
-          <div className="form-group">
-            <label>email </label>
-            <input
-              name="email"
-              className="form-control"
-              onChange={this.handleChange}
-            />
-            <label>Password</label>
-            <input
-              name="password"
-              className="form-control"
-              type="password"
-              onChange={this.handleChange}
-            />
+           <div class="mycontainer">
+              <div className="form">
+                    <div className="avatar-wrapper">	
+                    <img src={avatar} className="avatar"/> 
+                     </div>
+                     <br></br>
+                     <h2>PLEASE SIGNUP</h2>
+                    <div className="form-group">
+                     <input
+                     name="email"
+                     className="form-control"
+                     onChange={this.handleChange}
+                     placeholder="Email"
+                    />
+                    </div>
+                    <div className="form-group">
+                      <input
+                       name="password"
+                       className="form-control"
+                       type="password"
+                        onChange={this.handleChange}
+                     />
+                     </div>
 
-            <label>Password Confirmation</label>
-            <input
-              name="password_confirmation"
-              className="form-control"
-              type="password"
-              onChange={this.handleChange}
-            />
-          </div>
-
-          <button type="submit" className="btn btn-primary">
-            Login
-          </button>
-        </form>
-      </div>
+                  <label>Password Confirmation</label>
+                      <input
+                      name="password_confirmation"
+                      className="form-control"
+                      type="password"
+                      onChange={this.handleChange}
+                        />
+                        <br></br>
+                         <button type="submit" className="btn btn-outline-warning">
+                  Login
+                 </button>
+                       </div>
+                 </div>
+                 </form>
+                  </div>
     );
   }
 }

@@ -1,0 +1,61 @@
+
+/*******************
+LOGIN FORM
+*******************/
+.background{
+    background-color: #ffd560;
+}
+
+
+.mycontainer{
+    width: 500px;
+    height: 600px;
+    margin: 0 auto; 
+   
+}
+
+.avatar-wrapper {
+    width: 125px;
+    height: 120px;
+    position: absolute;
+    top: -53px;
+    left: 37%;
+    padding: 50px;
+    border-radius: 50%;
+  
+}
+
+
+h2{
+    padding-top: 40px;
+    padding-bottom: 5px
+}
+
+.form{    
+    margin-top: 0px;
+    padding: 20px;
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); */
+    border: 3px solid white;
+    background: url(http://www.graphicartsunit.com/images/noise2.png);
+    position: absolute;
+    content: "";
+    border-radius: 5px 5px 10px 10px;
+    position: relative;
+    margin-top: 26%;
+    margin-bottom: 15%;
+	
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 1px;
+    left: 1%;
+
+}
+
+.buttonPage{
+    justify-content: center;}
+
+
