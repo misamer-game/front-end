@@ -8,10 +8,7 @@ import ChangePasswordForm from "./components/authForm.js/ChangePasswordForm";
 import Home from "./components/Home";
 import Game from "./components/Game";
 import Profile from "./components/Profile";
-import Background from "./loginPage.svg";
-
-
-
+import Background from "./loginPage2.svg";
 
 class App extends Component {
   state = {
@@ -47,7 +44,6 @@ class App extends Component {
           changeActivePage={this.changeActivePage}
           onSignout={this.onSignout}
         />
-
         <div className="container">
           {activePage === "home" ? <Home changeActivePage={this.changeActivePage} /> : ""}
           {activePage === "game" ? <Game/> : ""}
@@ -68,9 +64,18 @@ class App extends Component {
           )}
           {activePage === "profile" ? <Profile /> : ""}
         </div>
-        <div className="background">
+
+
+
+
+
+        
         </div>
-        </div>
+
+
+
+
+
     );
   }
 }
