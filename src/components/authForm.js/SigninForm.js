@@ -11,11 +11,6 @@ class SigninForm extends Component {
       password: null
     },
     err: null,
-    activePage: "home"
-  };
-
-  changeActivePage = activePage => {
-    this.setState({ activePage });
   };
 
   handleLoginRequest = user => {
@@ -54,7 +49,6 @@ class SigninForm extends Component {
   };
 
   render() {
-    const { activePage } = this.state;
     return (
       <div className="wrapper">
         {this.state.err ? (
@@ -91,7 +85,7 @@ class SigninForm extends Component {
               </div>
               <div className="buttonPage">
               <button type="submit" className="btn btn-outline-warning">
-           Signup </button>  <button onClick={activePage === "game" ? <SignupForm/> : ""} className="btn btn-outline-warning">
+           Signup </button>  <button className="btn btn-outline-warning">
             Signin
           </button>
           </div>
