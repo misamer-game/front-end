@@ -6,7 +6,7 @@ class PlayerCar extends Component {
   render() {
     return (
 
-        <div style={this.props.car_postion} className="car">
+        <div style={this.props.car_postion} className="car" id="player">
         <div className="f_glass"></div>
         <div className="b_glass"></div>
         <div className="f_light_l"></div>
