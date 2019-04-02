@@ -54,44 +54,46 @@ class SigninForm extends Component {
         {this.state.err ? (
           <div className="alert alert-danger"> {this.state.err} </div>
         ) : (
-          ""
-        )}
+            ""
+          )}
 
         <form onSubmit={this.handleSubmit}>
-           <div class="mycontainer">
-           <div className="form">
-           <div className="avatar-wrapper">	
-             <img src={avatar} className="avatar"/> 
-         </div>
-         <br></br>
-         <h2>PLEASE SIGIN</h2>
-          <div className="form-group">
-              <input
-                name="email"
-                className="form-control"
-                onChange={this.handleChange}
-                placeholder="Email"
-               />
-               </div>
-               <br></br>
-             <div className="form-group">
-             <input
-               name="password"
-               type="password"
-               className="form-control"
-               placeholder="Password"
-               onChange={this.handleChange}
-              />
+          <div class="mycontainer">
+            <div className="form">
+              <div className="avatar-wrapper">
+                <img src={avatar} className="avatar" />
+              </div>
+              <br></br>
+              <h2>الله حيهم</h2>
+              <div className="form-group">
+                <input
+                  name="email"
+                  className="form-control"
+                  onChange={this.handleChange}
+                  placeholder="بريد علكتنروني"
+                />
+              </div>
+              <br></br>
+              <div className="form-group">
+                <input
+                  name="password"
+                  type="password"
+                  className="form-control"
+                  placeholder="باسورور"
+                  onChange={this.handleChange}
+                />
               </div>
               <div className="buttonPage">
-              <button type="submit" className="btn btn-outline-warning">
-           Signup </button>  <button className="btn btn-outline-warning">
-            Signin
-          </button>
+                <button type="submit" className="btn btn-outline-warning">
+                  تفضل </button>
+                {/*                   
+                <button className="btn btn-outline-warning">
+                  ماسجلت ؟
+          </button> */}
+              </div>
+            </div>
           </div>
-          </div>
-          </div>
-          </form>
+        </form>
       </div>
     );
   }
