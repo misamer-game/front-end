@@ -6,9 +6,12 @@ import SigninForm from "./components/authForm.js/SigninForm";
 import SignupForm from "./components/authForm.js/SignupForm";
 import ChangePasswordForm from "./components/authForm.js/ChangePasswordForm";
 import Home from "./components/Home";
-import Game from "./components/Game";
+import Game from "./components/GameStuff/Game";
 import Profile from "./components/Profile";
-import Background from "./loginPage2.svg";
+import Soundmusic from "./gamesound.mp3"
+
+//import Sound from 'react-sound';
+
 
 class App extends Component {
   state = {
@@ -38,7 +41,10 @@ class App extends Component {
   render() {
     const { user, activePage } = this.state;
     return (
+
       <div>
+        <audio src={Soundmusic} loop autoPlay />
+
         <Nav
           user={user}
           changeActivePage={this.changeActivePage}
@@ -46,31 +52,25 @@ class App extends Component {
         />
         <div className="container">
           {activePage === "home" ? <Home changeActivePage={this.changeActivePage} /> : ""}
-          {activePage === "game" ? <Game/> : ""}
+          {activePage === "game" ? <Game /> : ""}
           {activePage === "sign-in" ? (
             <SigninForm onSignin={this.onSignin} />
           ) : (
-            ""
-          )}
+              ""
+            )}
           {activePage === "sign-up" ? (
             <SignupForm onSignin={this.onSignin} />
           ) : (
-            ""
-          )}
+              ""
+            )}
           {activePage === "change-password" ? (
             <ChangePasswordForm changeActivePage={this.changeActivePage} />
           ) : (
-            ""
-          )}
+              ""
+            )}
           {activePage === "profile" ? <Profile /> : ""}
         </div>
-
-
-
-
-
-        
-        </div>
+      </div>
 
 
 

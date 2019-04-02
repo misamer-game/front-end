@@ -61,13 +61,13 @@ class SignupForm extends Component {
                     <img src={avatar} className="avatar"/> 
                      </div>
                      <br></br>
-                     <h2>PLEASE SIGNUP</h2>
+                     <h2>اقلط معنا </h2>
                     <div className="form-group">
                      <input
                      name="email"
                      className="form-control"
                      onChange={this.handleChange}
-                     placeholder="Email"
+                     placeholder="بريد علكتنروني"
                     />
                     </div>
                     <div className="form-group">
@@ -76,19 +76,19 @@ class SignupForm extends Component {
                        className="form-control"
                        type="password"
                         onChange={this.handleChange}
+                        placeholder="الباسورور"
                      />
                      </div>
-
-                  <label>Password Confirmation</label>
                       <input
                       name="password_confirmation"
                       className="form-control"
                       type="password"
+                      placeholder="عيد الباسورور يا الحب"
                       onChange={this.handleChange}
                         />
                         <br></br>
                          <button type="submit" className="btn btn-outline-warning">
-                  Login
+                  سجل
                  </button>
                        </div>
                  </div>
