@@ -9,6 +9,10 @@ import Home from "./components/Home";
 import Game from "./components/GameStuff/Game";
 import Profile from "./components/Profile";
 import Soundmusic from "./gamesound.mp3"
+import GameEasy from "./components/GameStuff/GameEasy"
+import GameMed from "./components/GameStuff/GameMed"
+import GameHard from "./components/GameStuff/GameHard"
+
 
 //import Sound from 'react-sound';
 
@@ -52,7 +56,10 @@ class App extends Component {
         />
         <div className="container">
           {activePage === "home" ? <Home changeActivePage={this.changeActivePage} /> : ""}
-          {activePage === "game" ? <Game /> : ""}
+          {activePage === "game" ? <Game changeActivePage={this.changeActivePage} /> : ""}
+          {activePage === "game-easy" ? <GameEasy changeActivePage={this.changeActivePage} /> : ""}
+          {activePage === "game-med" ? <GameMed changeActivePage={this.changeActivePage} /> : ""}
+          {activePage === "game-hard" ? <GameHard changeActivePage={this.changeActivePage} /> : ""}
           {activePage === "sign-in" ? (
             <SigninForm onSignin={this.onSignin} />
           ) : (
