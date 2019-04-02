@@ -7,10 +7,9 @@ class GameType extends Component {
         return (
             <div className="pt-5 mt-5">
                 <div className="d-flex justify-content-center">
-                    <button type="submit" className="action-button shadow animate green" onClick={() => this.props.changeActivePage("game-easy")} >سهـل</button>
-                    <button type="submit" className="action-button shadow animate blue" onClick={() => this.props.changeActivePage("game-med")} >متوسط</button>
-                    <button type="submit" className="action-button shadow animate red" onClick={() => this.props.changeActivePage("game-hard")} >نـار</button>
-
+                    <button type="submit" className="action-button shadow animate green" onClick={() => this.props.changeActivePage("game")} >سهـل</button>
+                    <button type="submit" className="action-button shadow animate blue" onClick={() => this.props.changeActivePage("game")} >متوسط</button>
+                    <button type="submit" className="action-button shadow animate red" onClick={() => this.props.changeActivePage("game")} >نـار</button>
                 </div>
             </div>
         );

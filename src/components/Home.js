@@ -10,7 +10,7 @@ class Home extends Component {
           <Leaderboard />
         </div>
         <div className="d-flex justify-content-center">
-          <button type="submit" className="action-button shadow animate red" onClick={() => this.props.changeActivePage("game")}>العب يلد</button>
+          <button type="submit" className="action-button shadow animate red" onClick={() => this.props.changeActivePage("game-type")}>العب يلد</button>
         </div>
       </div>
     );
