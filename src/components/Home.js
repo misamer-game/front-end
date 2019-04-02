@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Leaderboard from "../components/Leaderboard";
-
 class Home extends Component {
 
 
