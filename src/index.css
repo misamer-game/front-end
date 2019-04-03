@@ -11,10 +11,21 @@ body {
   background-image: url(loginPage.svg);
   background-size: cover;
   background-position: center top;
-  background-color: #ffd560
+  background-color: #ffd560;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.gamePage nav.navbar.navbar-expand-lg {
+  display:none;
+}
+
+.gamePage{
+  background-image: url(sand.png);
+  background-color: #ffd560;
+  background-size: cover;
+
 }

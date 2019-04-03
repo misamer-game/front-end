@@ -31,6 +31,14 @@ class App extends Component {
   }
 
   changeActivePage = activePage => {
+    if (activePage === "game") {
+      document.body.classList.add("gamePage");
+      document.body.classList.remove("mt-5");
+      document.body.classList.remove("p-3");
+    } else {
+      document.body.classList.remove("gamePage")
+
+    }
     this.setState({ activePage });
   };
   onSignin = () => {
@@ -54,7 +62,7 @@ class App extends Component {
           changeActivePage={this.changeActivePage}
           onSignout={this.onSignout}
         />
-        <div className=" mt-5 p-3">
+        <div>
           {activePage === "home" ? <Home changeActivePage={this.changeActivePage} /> : ""}
           {activePage === "game" ? <Game changeActivePage={this.changeActivePage} /> : ""}
           {activePage === "game-type" ? <GameType changeActivePage={this.changeActivePage} user={user} /> : ""}

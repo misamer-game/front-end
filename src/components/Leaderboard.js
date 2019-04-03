@@ -102,30 +102,33 @@ class Leaderboard extends Component {
 
     render() {
         return (
-            <div> <div className="con">
-                <ol>
+            <div>
+                <div className=" mt-5 p-3">
+                    <div className="con">
+                        <ol>
+                            <h1>اقدععععع ناااسسس</h1>
+                            <li>
+                                {/* return the highest score of the easy level */}
+                                <mark>{this.state.easy.score}</mark>
+                                {/* return the game type */}
+                                <small>{this.state.easy.game_type}</small>
+                            </li>
+                            <li>
+                                {/* return the highest score of the mid level */}
+                                <mark>{this.state.mid.score}</mark>
+                                {/* return the game type */}
+                                <small>{this.state.mid.game_type}</small>
+                            </li>
+                            <li>
+                                {/* return the highest score of the hard level */}
+                                <mark>{this.state.hard.score}</mark>
+                                {/* return the game type */}
+                                <small>{this.state.hard.game_type}</small>
+                            </li>
 
-                    <li>
-                        {/* return the highest score of the easy level */}
-                        <mark>{this.state.easy.score}</mark>
-                        {/* return the game type */}
-                        <small>{this.state.easy.game_type}</small>
-                    </li>
-                    <li>
-                        {/* return the highest score of the mid level */}
-                        <mark>{this.state.mid.score}</mark>
-                        {/* return the game type */}
-                        <small>{this.state.mid.game_type}</small>
-                    </li>
-                    <li>
-                        {/* return the highest score of the hard level */}
-                        <mark>{this.state.hard.score}</mark>
-                        {/* return the game type */}
-                        <small>{this.state.hard.game_type}</small>
-                    </li>
-
-                </ol>
-            </div></div>
+                        </ol>
+                    </div>
+                </div></div>
         )
     };
 
