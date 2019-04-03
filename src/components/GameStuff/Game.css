@@ -133,3 +133,49 @@ body {
     padding: 10px;
     box-shadow: 4px 4px 0px 1px #808080;
 }
+
+.msg{    
+    margin-top: 0px;
+    padding: 20px;
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); */
+    border: 3px solid white;
+    background: url(http://www.graphicartsunit.com/images/noise2.png);
+    position: absolute;
+    content: "";
+    border-radius: 5px 5px 10px 10px;
+    position: relative;
+    margin-top: 26%;
+    margin-bottom: 15%;
+	
+}
+
+.mycontainer{
+    width: 500px;
+    height: 800px;
+    margin: 0 auto; 
+}
+h3{
+    text-align: center;
+}
+
+.avatar-wrapper{
+
+        width: 80px;
+        background: url(http://www.graphicartsunit.com/images/noise2.png);
+        height: 80px;
+        position: absolute;
+        top: -53px;
+        left: 37%;
+        padding: 50px;
+        border-radius: 50%;
+
+}
+
+.avatar {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 15px;
+    left: 12%;
+
+}
