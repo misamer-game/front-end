@@ -316,7 +316,7 @@ class Game extends Component {
         <div id="score_div">
           Score: <span id="score">{this.state.score_counter}</span>
         </div>
-
+        <button type="submit" className="action-button shadow animate green" onClick={() => this.props.changeActivePage("home")} >البيت</button>
         <div id="container" ref={"game"} >
           <Line line_postion={this.state.line_1} />
           <Line line_postion={this.state.line_2} />

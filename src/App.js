@@ -13,6 +13,7 @@ import GameType from "./components/GameStuff/GameType"
 import GameEasy from "./components/GameStuff/GameEasy"
 import GameMed from "./components/GameStuff/GameMed"
 import GameHard from "./components/GameStuff/GameHard"
+import GameOver from "./components/GameStuff/GameOver"
 
 //import Sound from 'react-sound';
 
@@ -69,6 +70,7 @@ class App extends Component {
           {activePage === "game-easy" ? <GameEasy changeActivePage={this.changeActivePage} /> : ""}
           {activePage === "game-med" ? <GameMed changeActivePage={this.changeActivePage} /> : ""}
           {activePage === "game-hard" ? <GameHard changeActivePage={this.changeActivePage} /> : ""}
+          {activePage === "game-over" ? <GameOver changeActivePage={this.changeActivePage} /> : ""}
           {activePage === "sign-in" ? (
             <SigninForm onSignin={this.onSignin} />
           ) : (

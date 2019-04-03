@@ -27,7 +27,8 @@ class SignupForm extends Component {
     })
       .then(res => res.json())
       .then(data => {
-        if (data.error) this.setState({ err: data.error });
+        if (data.status > 299)
+          this.setState({ err: data.message });
         else {
           setUser(data);
           this.props.onSignin();
@@ -35,6 +36,7 @@ class SignupForm extends Component {
       })
       .catch(e => console.log(e));
   };
+
   handleSubmit = e => {
     e.preventDefault();
     this.handleLoginRequest(this.state.formData);
@@ -52,48 +54,48 @@ class SignupForm extends Component {
         {this.state.err ? (
           <div className="alert alert-warning"> {this.state.err} </div>
         ) : (
-          ""
-        )}
+            ""
+          )}
         <form onSubmit={this.handleSubmit}>
-           <div class="mycontainer">
-              <div className="form">
-                    <div className="avatar-wrapper">	
-                    <img src={avatar} className="avatar"/> 
-                     </div>
-                     <br></br>
-                     <h2>اقلط معنا </h2>
-                    <div className="form-group">
-                     <input
-                     name="email"
-                     className="form-control"
-                     onChange={this.handleChange}
-                     placeholder="بريد علكتنروني"
-                    />
-                    </div>
-                    <div className="form-group">
-                      <input
-                       name="password"
-                       className="form-control"
-                       type="password"
-                        onChange={this.handleChange}
-                        placeholder="الباسورور"
-                     />
-                     </div>
-                      <input
-                      name="password_confirmation"
-                      className="form-control"
-                      type="password"
-                      placeholder="عيد الباسورور يا الحب"
-                      onChange={this.handleChange}
-                        />
-                        <br></br>
-                         <button type="submit" className="btn btn-outline-warning">
-                  سجل
+          <div class="mycontainer">
+            <div className="form">
+              <div className="avatar-wrapper">
+                <img src={avatar} className="avatar" />
+              </div>
+              <br></br>
+              <h2>اقلط معنا </h2>
+              <div className="form-group">
+                <input
+                  name="email"
+                  className="form-control"
+                  onChange={this.handleChange}
+                  placeholder="بريد علكتنروني"
+                />
+              </div>
+              <div className="form-group">
+                <input
+                  name="password"
+                  className="form-control"
+                  type="password"
+                  onChange={this.handleChange}
+                  placeholder="الباسورور"
+                />
+              </div>
+              <input
+                name="password_confirmation"
+                className="form-control"
+                type="password"
+                placeholder="عيد الباسورور يا الحب"
+                onChange={this.handleChange}
+              />
+              <br></br>
+              <button type="submit" className="btn btn-outline-warning">
+                سجل
                  </button>
-                       </div>
-                 </div>
-                 </form>
-                  </div>
+            </div>
+          </div>
+        </form>
+      </div>
     );
   }
 }
