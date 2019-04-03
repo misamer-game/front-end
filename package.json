@@ -12,7 +12,8 @@
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-scripts": "2.1.8",
-    "react-sound": "^1.2.0"
+    "react-sound": "^1.2.0",
+    "react-timeout": "^1.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -281,7 +281,7 @@ class Game extends Component {
 
     cancelAnimationFrame(this.state.requestAnimationFrameId);
 
-    this.setState({ game_over: true })
+    //this.setState({ game_over: true })
 
     cancelAnimationFrame(this.state.move_right);
     this.setState({ move_right: false })
@@ -294,6 +294,19 @@ class Game extends Component {
 
     cancelAnimationFrame(this.state.move_down);
     this.setState({ move_down: false });
+
+    document.removeEventListener("keydown", this.handelKeyDown.bind(this));
+    document.removeEventListener("keyup", this.handelKeyUp.bind(this));
+
+    clearInterval(this.interval);
+
+    setTimeout(
+      function () {
+        this.setState({ game_over: true });
+      }
+        .bind(this),
+      3000
+    );
 
   }
 
@@ -320,10 +333,11 @@ class Game extends Component {
     );
 
     if (this.state.game_over) {
-      return <GameOver score={this.state.score_counter} />
+      return <GameOver score={this.state.score_counter} />;
     } else {
       return (gamee);
     }
+    // return (gamee);
 
   }
 }

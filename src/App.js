@@ -54,10 +54,10 @@ class App extends Component {
           changeActivePage={this.changeActivePage}
           onSignout={this.onSignout}
         />
-        <div className="container">
+        <div className=" mt-5 p-3">
           {activePage === "home" ? <Home changeActivePage={this.changeActivePage} /> : ""}
           {activePage === "game" ? <Game changeActivePage={this.changeActivePage} /> : ""}
-          {activePage === "game-type" ? <GameType changeActivePage={this.changeActivePage} /> : ""}
+          {activePage === "game-type" ? <GameType changeActivePage={this.changeActivePage} user={user} /> : ""}
           {activePage === "game-easy" ? <GameEasy changeActivePage={this.changeActivePage} /> : ""}
           {activePage === "game-med" ? <GameMed changeActivePage={this.changeActivePage} /> : ""}
           {activePage === "game-hard" ? <GameHard changeActivePage={this.changeActivePage} /> : ""}
