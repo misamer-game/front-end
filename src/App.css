@@ -7,14 +7,17 @@
 
 h2,h1{
     font-family: 'Tajawal', sans-serif;
+    font-weight: bold !important;
+    color: #3d312a;
 }
-
+.anon{
+    color: #3d312a;
+}
 
 .mycontainer{
     width: 500px;
     height: 600px;
     margin: 0 auto; 
-   
 }
 
 .avatar-wrapper {
@@ -37,7 +40,7 @@ h2{
     margin-top: 0px;
     padding: 20px;
     /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); */
-    border: 3px solid white;
+    border: 3px solid rgb(255, 255, 255);
     background: url(http://www.graphicartsunit.com/images/noise2.png);
     position: absolute;
     content: "";
@@ -45,9 +48,12 @@ h2{
     position: relative;
     margin-top: 26%;
     margin-bottom: 15%;
+    text-align: right;
 	
 }
-
+input{
+    text-align: right;
+}
 .avatar {
     width: 120px;
     height: 120px;
@@ -57,8 +63,7 @@ h2{
 
 }
 
-.buttonPage{
-    justify-content: center;}
+/*  */
 
     .animate
     {
@@ -71,17 +76,17 @@ h2{
         position: relative;
         padding: 5px 20px;
         margin: 0px 10px 10px 0px;
-        float: left;
         border-radius: 10px;
-        font-family: 'VT323';
-        font-size: 30px;
+        font-family: 'Tajawal', sans-serif;
+        font-weight: bold !important;
+        font-size: 35px;
         color: #FFF;
         text-decoration: none;	
     }
 
     .red
 {
-	background-color: #E74C3C;
+	background-color: rgb(219, 80, 65);
 	border-bottom: 5px solid #BD3E31;
 	text-shadow: 0px -2px #BD3E31;
 }
@@ -130,10 +135,20 @@ h2{
     
 }
 .changeNav:hover{
-  color:red
+  color: #E74C3C;
 }
 
 .msgPic{
     height: 500px;
     width: 500px;
 }
+
+.navbar-nav {
+    /* background-color: #2980B9 !important; */
+    color: #3d312a;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 37px;
+    font-weight: bold;
+    float: right !important;
+}
+

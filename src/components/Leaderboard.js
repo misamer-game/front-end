@@ -85,7 +85,7 @@ class Leaderboard extends Component {
                 <div className=" mt-5 p-3">
                     <div className="con">
                         <ol>
-                            <h1>اقدععععع ناااسسس</h1>
+                            <h1 className={"anon"}>أقدععععع ناااسسس</h1>
                             <li>
                                 <mark>{this.state.easy.User.email}</mark>
                                 <small>{this.state.easy.Game_type.game_type} | {this.state.easy.score}</small>
@@ -99,6 +99,7 @@ class Leaderboard extends Component {
                                 <small>{this.state.hard.Game_type.game_type} | {this.state.hard.score}</small>
                             </li>
                         </ol>
+
                     </div>
                 </div></div>
         )

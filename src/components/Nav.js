@@ -3,12 +3,12 @@ import React from "react";
 const authenticatedOptions = (changeActivePage, onSignout) => (
   <React.Fragment>
     <li
-      className="nav-item"
+      className="nav-item changeNav"
       onClick={() => changeActivePage("change-password")}
     >
       <div className="nav-link">غير البااسورور</div>
     </li>
-    <li className="nav-item" onClick={() => onSignout()}>
+    <li className="nav-item changeNav" onClick={() => onSignout()}>
       <div className="nav-link">خروج</div>
     </li>
   </React.Fragment>
@@ -46,8 +46,8 @@ const Nav = ({ user, changeActivePage, onSignout }) => (
     >
       <span className="navbar-toggler-icon" />
     </button>
-    <div className="collapse navbar-collapse" id="navbarNav">
-      <ul className="navbar-nav">
+    <div className="collapse navbar-collapse " id="navbarNav">
+      <ul className="nav navbar-nav navbar-right">
         {alwaysOptions(changeActivePage)}
 
         {user
