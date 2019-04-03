@@ -9,9 +9,6 @@ import Home from "./components/Home";
 import Game from "./components/GameStuff/Game";
 import Soundmusic from "./gamesound.mp3"
 import GameType from "./components/GameStuff/GameType"
-import GameEasy from "./components/GameStuff/GameEasy"
-import GameMed from "./components/GameStuff/GameMed"
-import GameHard from "./components/GameStuff/GameHard"
 import GameOver from "./components/GameStuff/GameOver"
 
 //import Sound from 'react-sound';
@@ -42,9 +39,7 @@ class App extends Component {
       document.body.classList.remove("p-3");
     } else {
       document.body.classList.remove("gamePage")
-
     }
-
     this.setState({ activePage, activeGameOption });
   };
 
@@ -57,6 +52,7 @@ class App extends Component {
     this.setState({ user: null });
     Signout();
   };
+
   render() {
     const { user, activePage } = this.state;
     return (

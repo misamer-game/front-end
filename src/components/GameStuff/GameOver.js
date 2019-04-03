@@ -51,13 +51,12 @@ class GameOver extends Component {
                             <img src={avatar} className="avatar" />
                         </div>
                         <br></br>
-                        <h3> Score: {this.props.score}</h3>
-                        <h3> level: {this.props.game_level}</h3>
-
+                        <h3>كفوووو</h3>
+                        <h3> {this.props.score} :نقاطك </h3>
                         <div className="d-flex justify-content-center">
                             <button type="submit"
-                                className="action-button shadow animate green"
-                                onClick={() => this.props.changeActivePage("home")}>البيت</button>
+                                className="action-button shadow animate red"
+                                onClick={() => this.props.changeActivePage("game-type")}>العب يلد</button>
                         </div>
                     </div>
                 </div>

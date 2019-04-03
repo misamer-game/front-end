@@ -26,7 +26,7 @@ Leaderboard
     li {
       position: relative;
       z-index: 10;
-      font-size: 14px;
+      font-size: 20px;
       counter-increment: leaderboard;
       padding: 18px 50px 18px 50px;
       cursor: pointer;
@@ -63,6 +63,7 @@ Leaderboard
         margin: 0;
         background: none;
         color: #fff;
+        
 
         &::before, &::after {
           content: '';
@@ -89,6 +90,7 @@ Leaderboard
         z-index: 2;
         display: block;
         text-align: right;
+        color: #fff;
       }
 
       &::after {

@@ -35,7 +35,7 @@ class Game extends Component {
         width: '40px',
         top: '-100px',
         left: '60%',
-        backgroundColor: '#85ef47'
+        backgroundColor: '#BD3E31'
       },
 
       car_2: {
@@ -51,7 +51,7 @@ class Game extends Component {
         width: '40px',
         top: '-350px',
         left: '50%',
-        backgroundColor: '#6927ff'
+        backgroundColor: '#3700b6'
       },
 
       line_1: {

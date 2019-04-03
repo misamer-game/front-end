@@ -5,7 +5,6 @@ class Home extends Component {
 
   render() {
     let dirComp = "sign-in";
-    // const dirComp = "game-type";
     if (this.props.user) {
       dirComp = "game-type";
     }
@@ -17,7 +16,6 @@ class Home extends Component {
         <div className="d-flex justify-content-center">
           <button type="submit" className="action-button shadow animate red" onClick={() => this.props.changeActivePage(dirComp)}>العب يلد</button>
         </div>
-
       </div>
     );
   }
