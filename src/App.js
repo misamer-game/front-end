@@ -7,7 +7,6 @@ import SignupForm from "./components/authForm.js/SignupForm";
 import ChangePasswordForm from "./components/authForm.js/ChangePasswordForm";
 import Home from "./components/Home";
 import Game from "./components/GameStuff/Game";
-import Profile from "./components/Profile";
 import Soundmusic from "./gamesound.mp3"
 import GameType from "./components/GameStuff/GameType"
 import GameEasy from "./components/GameStuff/GameEasy"
@@ -21,7 +20,12 @@ import GameOver from "./components/GameStuff/GameOver"
 class App extends Component {
   state = {
     user: null,
-    activePage: "home"
+    activePage: "home",
+    activeGameOption: {
+      level: 1,
+      speed: 4,
+      lineSpeed: 9
+    }
   };
   componentDidMount() {
     // check if we have a token in the local storage
@@ -31,7 +35,7 @@ class App extends Component {
     }
   }
 
-  changeActivePage = activePage => {
+  changeActivePage = (activePage, activeGameOption = { level: 1, speed: 4, lineSpeed: 9 }) => {
     if (activePage === "game") {
       document.body.classList.add("gamePage");
       document.body.classList.remove("mt-5");
@@ -40,11 +44,13 @@ class App extends Component {
       document.body.classList.remove("gamePage")
 
     }
-    this.setState({ activePage });
+
+    this.setState({ activePage, activeGameOption });
   };
+
   onSignin = () => {
     this.setState({ user: getUser() });
-    this.changeActivePage("profile");
+    this.changeActivePage("home");
   };
   onSignout = () => {
     console.log("sigin out");
@@ -64,13 +70,10 @@ class App extends Component {
           onSignout={this.onSignout}
         />
         <div>
-          {activePage === "home" ? <Home changeActivePage={this.changeActivePage} /> : ""}
-          {activePage === "game" ? <Game changeActivePage={this.changeActivePage} /> : ""}
+          {activePage === "home" ? <Home user={user} changeActivePage={this.changeActivePage} /> : ""}
+          {activePage === "game" ? <Game changeActivePage={this.changeActivePage} gameOption={this.state.activeGameOption} user={user} /> : ""}
           {activePage === "game-type" ? <GameType changeActivePage={this.changeActivePage} user={user} /> : ""}
-          {activePage === "game-easy" ? <GameEasy changeActivePage={this.changeActivePage} /> : ""}
-          {activePage === "game-med" ? <GameMed changeActivePage={this.changeActivePage} /> : ""}
-          {activePage === "game-hard" ? <GameHard changeActivePage={this.changeActivePage} /> : ""}
-          {activePage === "game-over" ? <GameOver changeActivePage={this.changeActivePage} /> : ""}
+          {activePage === "game-over" ? <GameOver changeActivePage={this.changeActivePage} user={user} /> : ""}
           {activePage === "sign-in" ? (
             <SigninForm onSignin={this.onSignin} />
           ) : (
@@ -86,7 +89,6 @@ class App extends Component {
           ) : (
               ""
             )}
-          {activePage === "profile" ? <Profile /> : ""}
         </div>
       </div>
 

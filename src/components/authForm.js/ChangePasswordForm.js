@@ -43,30 +43,38 @@ class ChangePasswordForm extends Component {
 
   render() {
     return (
-      <div className="pt-5 mt-5">
-        <h1>Change Password</h1>
-
+      <div className="wrapper">
         <form onSubmit={this.handleSubmit}>
-          <div className="form-group">
-            <label>Old Password</label>
-            <input
-              name="old"
-              className="form-control"
-              type="password"
-              onChange={this.handleChange}
-            />
-            <label>new Password </label>
-            <input
-              name="new"
-              type="password"
-              className="form-control"
-              onChange={this.handleChange}
-            />
-          </div>
+          <div class="mycontainer">
+            <div className="form">
+              {/* <div className="avatar-wrapper">
+                <img src={avatar} className="avatar" />
+              </div> */}
+              <h2>تغير البااسورور</h2>
+              <input
+                name="old"
+                className="form-control"
+                type="password"
+                onChange={this.handleChange}
+                placeholder="االباسورور القديمة"
 
-          <button type="submit" className="btn btn-primary">
-            Login
-          </button>
+              />
+              <br></br>
+
+              <div className="form-group">
+                <input
+                  name="new"
+                  type="password"
+                  className="form-control"
+                  onChange={this.handleChange}
+                  placeholder="عيدها مره ثانيه"
+                />
+              </div>
+              <button type="submit" className="btn btn-outline-warning">
+                غير
+          </button></div>
+
+          </div>
         </form>
       </div>
     );

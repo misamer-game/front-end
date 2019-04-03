@@ -15,8 +15,8 @@ class Game extends Component {
       requestAnimationFrameId: undefined,
       game_over: false,
       score_counter: 0,
-      speed: 4,
-      line_speed: 9,
+      speed: this.props.gameOption.speed,
+      line_speed: this.props.gameOption.lineSpeed,
       move_right: false,
       move_left: false,
       move_up: false,
@@ -27,7 +27,7 @@ class Game extends Component {
         width: '40px',
         bottom: '30px',
         left: '60%',
-        backgroundColor: '#ffdf5a'
+        backgroundColor: '#d8cbbb'
       },
 
       car_1: {
@@ -35,7 +35,7 @@ class Game extends Component {
         width: '40px',
         top: '-100px',
         left: '60%',
-        backgroundColor: '#26c5ff'
+        backgroundColor: '#85ef47'
       },
 
       car_2: {
@@ -51,7 +51,7 @@ class Game extends Component {
         width: '40px',
         top: '-350px',
         left: '50%',
-        backgroundColor: '#26c5ff'
+        backgroundColor: '#6927ff'
       },
 
       line_1: {
@@ -77,6 +77,9 @@ class Game extends Component {
     }
   }
 
+  componentDidMount() {
+    console.log("\nn\\nn\n\n\nn\\\n********", this.props.gameOption.speed);
+  }
   componentWillMount = () => {
     this.startGame()
     document.addEventListener("keydown", this.handelKeyDown.bind(this));
@@ -311,6 +314,7 @@ class Game extends Component {
   }
 
   render = () => {
+    console.log(this.props.type);
     let gamee = (
       <div>
         <div id="score_div">
@@ -333,11 +337,11 @@ class Game extends Component {
 
     if (this.state.game_over) {
       return <GameOver changeActivePage={this.props.changeActivePage}
-        score={this.state.score_counter} />;
+        score={this.state.score_counter} game_level={this.props.gameOption.level} user={this.props.user} />;
     } else {
       return (gamee);
     }
-    // return (gamee);
+
 
   }
 }

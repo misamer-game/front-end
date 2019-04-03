@@ -4,27 +4,10 @@ import apiUrl from "../apiConfig"
 
 class Leaderboard extends Component {
     state = {
-        easy: [],
-        mid: [],
-        hard: []
+        easy: { Game_type: {}, User: {} },
+        mid: { Game_type: {}, User: {} },
+        hard: { Game_type: {}, User: {} }
     }
-
-    // handleLoginRequest = () => {
-    //     let url = `${apiUrl}/games`;
-
-    //     fetch(url, {
-    //         mode: "cors",
-    //         credentials: "include",
-    //         method: "GET",
-    //     })
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             console.log(data.game)
-    //             this.setState({ levels: data.game })
-    //         })
-
-    //         .catch(e => console.log(e));
-    // };
 
     // get the url of easy game level from DB
     handleEasyRequest = () => {
@@ -39,7 +22,7 @@ class Leaderboard extends Component {
         })
             .then(response => response.json())
             .then(data => {
-                console.log("me", data);
+                console.log("easy", data);
 
                 this.setState({ easy: data })
                 console.log(this.state.easy.game_type)
@@ -62,10 +45,8 @@ class Leaderboard extends Component {
         })
             .then(response => response.json())
             .then(data => {
+                console.log("easy", data);
                 this.setState({ mid: data })
-                console.log(this.state.mid.game_type)
-                console.log(this.state.mid.game_type)
-
 
             })
 
@@ -83,10 +64,8 @@ class Leaderboard extends Component {
         })
             .then(response => response.json())
             .then(data => {
+                console.log("hard", data);
                 this.setState({ hard: data })
-                console.log(this.state.hard.game_type)
-                // console.log(this.state.levels.game_type)
-
 
             })
 
@@ -108,24 +87,17 @@ class Leaderboard extends Component {
                         <ol>
                             <h1>اقدععععع ناااسسس</h1>
                             <li>
-                                {/* return the highest score of the easy level */}
-                                <mark>{this.state.easy.score}</mark>
-                                {/* return the game type */}
-                                <small>{this.state.easy.game_type}</small>
+                                <mark>{this.state.easy.User.email}</mark>
+                                <small>{this.state.easy.Game_type.game_type} | {this.state.easy.score}</small>
                             </li>
                             <li>
-                                {/* return the highest score of the mid level */}
-                                <mark>{this.state.mid.score}</mark>
-                                {/* return the game type */}
-                                <small>{this.state.mid.game_type}</small>
+                                <mark>{this.state.mid.User.email}</mark>
+                                <small>{this.state.mid.Game_type.game_type} | {this.state.mid.score}</small>
                             </li>
                             <li>
-                                {/* return the highest score of the hard level */}
-                                <mark>{this.state.hard.score}</mark>
-                                {/* return the game type */}
-                                <small>{this.state.hard.game_type}</small>
+                                <mark>{this.state.hard.User.email}</mark>
+                                <small>{this.state.hard.Game_type.game_type} | {this.state.hard.score}</small>
                             </li>
-
                         </ol>
                     </div>
                 </div></div>

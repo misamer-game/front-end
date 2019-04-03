@@ -4,13 +4,13 @@ class Home extends Component {
 
 
   render() {
-    //const dirComp = "sign-in";
-    const dirComp = "game-type";
+    let dirComp = "sign-in";
+    // const dirComp = "game-type";
     if (this.props.user) {
       dirComp = "game-type";
     }
     return (
-      <div className=" mt-5 p-3">
+      <div className=" mt-5 p-3" style={{ paddingBottom: 400 }}>
         <div className="d-flex justify-content-center">
           <Leaderboard />
         </div>
