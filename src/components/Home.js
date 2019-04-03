@@ -10,8 +10,7 @@ class Home extends Component {
       dirComp = "game-type";
     }
     return (
-      <div className="pt-5 mt-5">
-
+      <div className=" mt-5 p-3">
         <div className="d-flex justify-content-center">
           <Leaderboard />
         </div>

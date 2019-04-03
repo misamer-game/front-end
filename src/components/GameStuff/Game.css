@@ -11,7 +11,7 @@ body {
     height: 100vh;
     width: 33%;
     left: 35%;
-    margin-top: 20px;;
+    /* margin-top: 20px;; */
     background-color: #292929;
     overflow: hidden;
 }
