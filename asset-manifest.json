@@ -1,0 +1,20 @@
+{
+  "main.css": "/front-end/static/css/main.d20b33e2.chunk.css",
+  "main.js": "/front-end/static/js/main.53a717d2.chunk.js",
+  "main.js.map": "/front-end/static/js/main.53a717d2.chunk.js.map",
+  "runtime~main.js": "/front-end/static/js/runtime~main.d65dd991.js",
+  "runtime~main.js.map": "/front-end/static/js/runtime~main.d65dd991.js.map",
+  "static/css/2.8b0e0a1d.chunk.css": "/front-end/static/css/2.8b0e0a1d.chunk.css",
+  "static/js/2.011afce2.chunk.js": "/front-end/static/js/2.011afce2.chunk.js",
+  "static/js/2.011afce2.chunk.js.map": "/front-end/static/js/2.011afce2.chunk.js.map",
+  "index.html": "/front-end/index.html",
+  "precache-manifest.b082bb70972643c796352cac45e7f000.js": "/front-end/precache-manifest.b082bb70972643c796352cac45e7f000.js",
+  "service-worker.js": "/front-end/service-worker.js",
+  "static/css/2.8b0e0a1d.chunk.css.map": "/front-end/static/css/2.8b0e0a1d.chunk.css.map",
+  "static/css/main.d20b33e2.chunk.css.map": "/front-end/static/css/main.d20b33e2.chunk.css.map",
+  "static/media/gamesound.mp3": "/front-end/static/media/gamesound.ad33a2b6.mp3",
+  "static/media/login.png": "/front-end/static/media/login.5f3db58d.png",
+  "static/media/index.css": "/front-end/static/media/sand.0f76e500.png",
+  "static/media/signup.png": "/front-end/static/media/signup.37a5a876.png",
+  "static/media/trophy.png": "/front-end/static/media/trophy.7e43c91b.png"
+}
