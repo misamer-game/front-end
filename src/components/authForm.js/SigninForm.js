@@ -59,6 +59,8 @@ class SigninForm extends Component {
 
         <form onSubmit={this.handleSubmit}>
           <div class="mycontainer">
+            <br></br>
+            <br></br>
             <div className="form">
               <div className="avatar-wrapper">
                 <img src={avatar} className="avatar" />
